@@ -1,0 +1,131 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.repo-container {
+  margin: 0;
+  width: 90%;
+  background-color: #f6f6f6;
+  margin: auto;
+  padding: 20px;
+}
+.repo-container .get-repo {
+  padding: 20px;
+  display: flex;
+  background-color: #eee;
+}
+.repo-container .get-repo input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  font-size: 20px;
+  height: 25px;
+  color: #db9b96;
+}
+.repo-container .get-repo input:focus {
+  outline: 2px #f44336 solid;
+}
+.repo-container .get-repo .get-button {
+  width: 140px;
+  margin-left: 10px;
+  background-color: #f44336;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.repo-container .no-repo {
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+.show-data span {
+  font-size: 40px;
+  margin: 10px auto;
+  color: red;
+  text-align: center;
+}
+
+.show-data div {
+  font-size: 18px;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  margin-top: 5px;
+  /* cursor: pointer; */
+  text-align: center;
+}
+
+.show-data a:hover {
+  color: #db9b96;
+}
+.fDiv {
+  /* display: flex;
+  flex-direction: row; */
+  /* justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.newDiv span {
+  color: white;
+  font-size: 14px;
+  margin-left: 4px;
+  background-color: #019588;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.show-data a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  background-color: #b6164d;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.cycle {
+  background-color: #777;
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+.cycle::after {
+  content: "";
+  position: absolute;
+  /* background-color: white; */
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 5px solid red;
+  top: 50%;
+  left: 50%;
+  border-left-color: transparent;
+  margin-left: -30px;
+  margin-top: -30px;
+  /* transform: translate(-50%, -50%); */
+  /* transition: all 2s; */
+  animation-name: cycle;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes cycle {
+  from {
+    transform: rotate(0deg);
+    /* transform: translate(-50%, -50%); */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* border-color: green; */
+  }
+}
